@@ -1,0 +1,3 @@
+panda86_master:
+    resource: "@Panda86MasterBundle/Resources/config/routing.yml"
+    prefix:   /
