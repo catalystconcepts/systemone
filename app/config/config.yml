@@ -1,5 +1,6 @@
 imports:
     - { resource: parameters.yml }
+    - { resource: security.yml }
 
 framework:
     #esi:             ~
@@ -43,6 +44,10 @@ doctrine:
         password: %database_password%
         path:     %database_path%
         charset:  UTF8
+
+    orm:
+        auto_generate_proxy_classes: %kernel.debug%
+        auto_mapping: true
 
 # cmf configuration
 doctrine_phpcr:
@@ -99,3 +104,8 @@ lunetics_locale:
         - router
         - browser
     allowed_locales: %locales%
+
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    user_class: Panda86\MasterBundle\Entity\User

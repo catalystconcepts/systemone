@@ -4,7 +4,7 @@ namespace Panda86\MasterBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class DefaultController extends Controller
+class DashboardController extends Controller
 {
     public function indexAction()
     {

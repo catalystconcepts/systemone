@@ -1,3 +1,3 @@
 panda86_master_homepage:
     path:  /
-    defaults: { _controller: Panda86MasterBundle:Default:index }
+    defaults: { _controller: Panda86MasterBundle:Dashboard:index }
