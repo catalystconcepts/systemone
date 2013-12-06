@@ -18,7 +18,7 @@ panda86_master_r_a:
     path:  /reports/annual
     defaults: { _controller: Panda86MasterBundle:Dashboard:annual }
 
-panda86_master_r_1:
+panda86_master_r_q:
     path:  /reports/quarterly
     defaults: { _controller: Panda86MasterBundle:Dashboard:quarter }
 
