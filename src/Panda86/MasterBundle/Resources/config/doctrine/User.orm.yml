@@ -1,0 +1,8 @@
+Panda86\MasterBundle\Entity\User:
+    type:  entity
+    table: master_admin_user
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO

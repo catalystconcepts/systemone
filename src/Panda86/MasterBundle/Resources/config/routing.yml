@@ -1,3 +1,23 @@
-panda86_master_homepage:
+panda86_master_d:
     path:  /
-    defaults: { _controller: Panda86MasterBundle:Default:index }
+    defaults: { _controller: Panda86MasterBundle:Dashboard:index }
+
+panda86_master_c:
+    path:  /client
+    defaults: { _controller: Panda86MasterBundle:Dashboard:client }
+
+panda86_master_r:
+    path:  /reports
+    defaults: { _controller: Panda86MasterBundle:Dashboard:reports }
+
+panda86_master_r_a:
+    path:  /reports/annual
+    defaults: { _controller: Panda86MasterBundle:Dashboard:annual }
+
+panda86_master_r_q:
+    path:  /reports/quarterly
+    defaults: { _controller: Panda86MasterBundle:Dashboard:quarter }
+
+panda86_master_i:
+    path:  /invoices
+    defaults: { _controller: Panda86MasterBundle:Dashboard:invoices }

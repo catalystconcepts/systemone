@@ -1,0 +1,697 @@
+{% extends 'admin-master.html.twig' %}
+
+{% block title %}Client Management - {{ parent() }}{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="/css/admin-master/client.css"/>
+{% endblock %}
+
+{% block body %}
+<div class="container box">
+    <div class="row">
+        <div class="col-md-11 main-content border col-centered">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+        <tr>
+        <td align="center">
+        <br>
+        <table
+                bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" width="1020">
+        <tbody>
+        <tr>
+        <td style="padding:10px;">
+        <table height="500" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+        <tr>
+        <td valign="top">
+
+        <!-- Header -->
+
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+            <tr>
+                <td><img
+                        src="/img/webtrix-holdings-logo.gif"
+                        alt="Webtrix Holdings" border="0"></td>
+                <td><p class="header" style="font-size:25px;">Master Admin Area</p></td>
+                <td align="right"><a href="{{ path('panda86_master_d') }}">Home</a> &nbsp; </td>
+            </tr>
+            </tbody>
+        </table>
+        <p></p>
+
+        <div class="line"></div>
+        <p class="header" align="center">Client Management</p>
+
+        <p>
+
+            <strong>DEVELOPMENT NOTES</strong>: here is where the Resellers will be managed and added... when you change the
+            dropdown the acrion will happen
+            straight away and populate the fields... after changes are made and the save button is clicked the inforamtion will
+            be updated.<br><br>
+
+            The form will be blank, like now, and if a Reseller is not selected and
+            new information is added and saved then a new recored will be put in
+            the
+            database as a new Reseller.
+
+        </p>
+
+        <form>
+
+            <p align="center">
+
+                <select name="quarter" class="formtext" style="width:250px;">
+
+                    <option value="--" selected="selected">Select Reseller</option>
+
+                    <option value="higotec">HiGoTec</option>
+
+                    <!-- when there are more resellers they will go below but this will be manually added -->
+
+                    <option value="reseller1">Reseller 1</option>
+
+                    <option value="reseller2">Reseller 2</option>
+
+                    <option value="reseller3">Reseller 3</option>
+
+                </select>
+
+            </p>
+
+        </form>
+
+        <!-- Top Client Info -->
+
+        <div class="line"></div>
+
+        <p class="header" align="center">You are currently managing - COMPANY NAME</p>
+
+        <div class="line"></div>
+
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+            <tbody>
+            <tr>
+
+                <td style="padding:10px;" valign="top">
+
+                    <p class="header">Company Details</p>
+
+                    <input name="companyname"
+                           style="width: 200px; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); padding-right: 16px; background-repeat: no-repeat; background-attachment: scroll; background-position: right center;"
+                           class="formtext" value="Company Name" onfocus="if(this.value=='Company Name')this.value='';"
+                           onblur="if(this.value=='')this.value='Company Name';" type="text"><br>
+
+                    <input name="abn" style="width:200px;" class="formtext" value="ABN"
+                           onfocus="if(this.value=='ABN')this.value='';" onblur="if(this.value=='')this.value='ABN';"
+                           type="text"><br>
+
+                    <input name="firstname" style="width:200px;" class="formtext" value="First Name"
+                           onfocus="if(this.value=='First Name')this.value='';"
+                           onblur="if(this.value=='')this.value='First Name';" type="text"><br>
+
+                    <input name="lastname" style="width:200px;" class="formtext" value="Last Name"
+                           onfocus="if(this.value=='Last Name')this.value='';"
+                           onblur="if(this.value=='')this.value='Last Name';" type="text"><br>
+
+                    <input name="username" style="width:200px;" class="formtext" value="Username"
+                           onfocus="if(this.value=='Username')this.value='';" onblur="if(this.value=='')this.value='Username';"
+                           type="text"><br>
+
+                    <input name="password"
+                           style="width: 200px; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); padding-right: 16px; background-repeat: no-repeat; background-attachment: scroll; background-position: right center;"
+                           class="formtext" value="Password" onfocus="if(this.value=='Password')this.value='';"
+                           onblur="if(this.value=='')this.value='Password';" type="text">
+
+                </td>
+
+                <td style="padding:10px;" valign="top">
+
+                    <p class="header">Address Details</p>
+
+                    <input name="address1" style="width:200px;" class="formtext" value="Address"
+                           onfocus="if(this.value=='Address')this.value='';" onblur="if(this.value=='')this.value='Address';"
+                           type="text"><br>
+
+                    <input name="address2" style="width:200px;" class="formtext" value="Address"
+                           onfocus="if(this.value=='Address')this.value='';" onblur="if(this.value=='')this.value='Address';"
+                           type="text"><br>
+
+                    <input name="suburb" style="width:200px;" class="formtext" value="Suburb"
+                           onfocus="if(this.value=='Suburb')this.value='';" onblur="if(this.value=='')this.value='Suburb';"
+                           type="text"><br>
+
+                    <input name="state" style="width:200px;" class="formtext" value="State"
+                           onfocus="if(this.value=='State')this.value='';" onblur="if(this.value=='')this.value='State';"
+                           type="text"><br>
+
+                    <input name="postcode" style="width:200px;" class="formtext" value="Postcode"
+                           onfocus="if(this.value=='Postcode')this.value='';" onblur="if(this.value=='')this.value='Postcode';"
+                           type="text"><br>
+
+                    <input name="country" style="width:200px;" class="formtext" value="Australia"
+                           onfocus="if(this.value=='Australia')this.value='';"
+                           onblur="if(this.value=='')this.value='Australia';" type="text">
+
+                </td>
+
+                <td style="padding:10px;" valign="top">
+
+                    <p class="header">Contact Details</p>
+
+                    <input name="mobile" style="width:200px;" class="formtext" value="Mobile"
+                           onfocus="if(this.value=='Mobile')this.value='';" onblur="if(this.value=='')this.value='Mobile';"
+                           type="text"><br>
+
+                    <input name="telephone" style="width:200px;" class="formtext" value="Telephone"
+                           onfocus="if(this.value=='Telephone')this.value='';"
+                           onblur="if(this.value=='')this.value='Telephone';" type="text"><br>
+
+                    <input name="fax" style="width:200px;" class="formtext" value="Fax"
+                           onfocus="if(this.value=='Fax')this.value='';" onblur="if(this.value=='')this.value='Fax';"
+                           type="text">
+
+                    <p class="header">Main Domain</p>
+
+                    <input name="domainname" style="width:200px;" class="formtext" value="Domain Name"
+                           onfocus="if(this.value=='Domain Name')this.value='';"
+                           onblur="if(this.value=='')this.value='Domain Name';" type="text">
+
+                </td>
+
+                <td style="padding:10px;" valign="top">
+
+                    <p class="header">Main Contact Email</p>
+
+                    <input name="contactemail" style="width:200px;" class="formtext" value="Contact Email"
+                           onfocus="if(this.value=='Contact Email')this.value='';"
+                           onblur="if(this.value=='')this.value='Contact Email';" type="text">
+
+                    <p class="header">Accounts Email</p>
+
+                    <input name="accountsemail" style="width:200px;" class="formtext" value="Accounts Email"
+                           onfocus="if(this.value=='Accounts Email')this.value='';"
+                           onblur="if(this.value=='')this.value='Accounts Email';" type="text">
+
+                </td>
+
+            </tr>
+
+            </tbody>
+        </table>
+
+        <div class="line"></div>
+
+        <!-- Main Table -->
+
+        <form>
+
+        <p align="center">
+
+        <table border="0" cellpadding="0" cellspacing="0" width="990">
+
+        <tbody>
+        <tr>
+
+        <td valign="top">
+
+            <!-- Left Table -->
+
+            <!-- CMS Websites -->
+
+            <table class="border" border="0" cellpadding="0" cellspacing="0" width="320">
+
+                <tbody>
+                <tr>
+
+                    <td colspan="2" class="lightgrey"><p style="padding:6px;" align="center"><strong>CMS Websites - Once Off
+                        Charge</strong></p></td>
+
+                </tr>
+
+                <tr>
+
+                    <td style="padding:6px 0px;" width="240"><p align="right">1 Page Website:&nbsp;</p></td>
+
+                    <td><p>$<input name="" value="25" class="formtext"
+                                   style="width: 60px; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); padding-right: 16px; background-repeat: no-repeat; background-attachment: scroll; background-position: right center;"
+                                   type="text"></p></td>
+
+                </tr>
+
+                <tr>
+
+                    <td style="padding:6px 0px;" width="240"><p align="right">Base CMS Website:&nbsp;</p></td>
+
+                    <td><p>$<input name="" value="99" class="formtext" style="width:60px;" type="text"></p></td>
+
+                </tr>
+
+                <tr>
+
+                    <td style="padding:6px 0px;" width="240"><p align="right">CMS Package Website:&nbsp;</p></td>
+
+                    <td><p>$<input name="" class="formtext" style="width:60px;" type="text"></p></td>
+
+                </tr>
+
+                </tbody>
+            </table>
+
+            <br>
+
+            <!-- Hosting -->
+
+            <table class="border" border="0" cellpadding="0" cellspacing="0" width="320">
+
+                <tbody>
+                <tr>
+
+                    <td colspan="2" class="lightgrey"><p style="padding:6px;" align="center"><strong>Hosting Charges - Monthly
+                        Charge</strong></p></td>
+
+                </tr>
+
+                <tr>
+
+                    <td style="padding:6px 0px;" width="240"><p align="right">1 Page Website:&nbsp;</p></td>
+
+                    <td><p>$<input name="" value="10" class="formtext" style="width:60px;" type="text"></p></td>
+
+                </tr>
+
+                <tr>
+
+                    <td style="padding:6px 0px;" width="240"><p align="right">Base CMS Website:&nbsp;</p></td>
+
+                    <td><p>$<input name="" value="10" class="formtext" style="width:60px;" type="text"></p></td>
+
+                </tr>
+
+                <tr>
+
+                    <td style="padding:6px 0px;" width="240"><p align="right">Additional Hosting Add-on:&nbsp;</p></td>
+
+                    <td><p>$<input name="" value="10" class="formtext" style="width:60px;" type="text"></p></td>
+
+                </tr>
+
+                </tbody>
+            </table>
+
+            <br>
+
+            <!-- Domains -->
+
+            <table class="border" border="0" cellpadding="0" cellspacing="0" width="320">
+
+                <tbody>
+                <tr>
+
+                    <td colspan="2" class="lightgrey"><p style="padding:6px;" align="center"><strong>Domain Names - per 2
+                        Years</strong></p></td>
+
+                </tr>
+
+                <tr>
+
+                    <td style="padding:6px 0px;" width="240"><p align="right">.com:&nbsp;</p></td>
+
+                    <td><p>$<input name="" value="0" class="formtext" style="width:60px;" type="text"></p></td>
+
+                </tr>
+
+                <tr>
+
+                    <td style="padding:6px 0px;" width="240"><p align="right">.com.au:&nbsp;</p></td>
+
+                    <td><p>$<input name="" value="0" class="formtext" style="width:60px;" type="text"></p></td>
+
+                </tr>
+
+                <tr>
+
+                    <td style="padding:6px 0px;" width="240"><p align="right">.co.nz:&nbsp;</p></td>
+
+                    <td><p>$<input name="" value="0" class="formtext" style="width:60px;" type="text"></p></td>
+
+                </tr>
+
+                <tr>
+
+                    <td style="padding:6px 0px;" width="240"><p align="right">.co.uk:&nbsp;</p></td>
+
+                    <td><p>$<input name="" value="0" class="formtext" style="width:60px;" type="text"></p></td>
+
+                </tr>
+
+                </tbody>
+            </table>
+
+        </td>
+
+        <!-- Gap -->
+
+        <td width="30"><p>&nbsp;</p></td>
+
+        <!-- Right Table -->
+
+        <td valign="top">
+
+            <!-- Add-ons -->
+
+            <table border="0" cellpadding="0" cellspacing="0">
+
+                <tbody>
+                <tr>
+
+                    <td>
+
+                        <table class="border" border="0" cellpadding="0" cellspacing="0" width="320">
+
+                            <tbody>
+                            <tr>
+
+                                <td colspan="2" class="lightgrey"><p style="padding:6px;" align="center"><strong>Major Add-ons -
+                                    Once Off Charge</strong></p>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="padding:6px 0px;" width="240"><p align="right">SMS:&nbsp;</p></td>
+
+                                <td><p>$<input name="" value="25" class="formtext" style="width:60px;" type="text"></p></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="padding:6px 0px;" width="240"><p align="right">e-commerce:&nbsp;</p></td>
+
+                                <td><p>$<input name="" value="100" class="formtext" style="width:60px;" type="text"></p></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="padding:6px 0px;" width="240"><p align="right">Call To Action:&nbsp;</p></td>
+
+                                <td><p>$<input name="" value="10" class="formtext" style="width:60px;" type="text"></p></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="padding:6px 0px;" width="240"><p align="right">Email Subscription:&nbsp;</p></td>
+
+                                <td><p>$<input name="" value="25" class="formtext" style="width:60px;" type="text"></p></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="padding:6px 0px;" width="240"><p align="right">Secure Login:&nbsp;</p></td>
+
+                                <td><p>$<input name="" value="25" class="formtext" style="width:60px;" type="text"></p></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="padding:6px 0px;" width="240"><p align="right">Custom Layout:&nbsp;</p></td>
+
+                                <td><p>$<input name="" value="75" class="formtext" style="width:60px;" type="text"></p></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="padding:6px 0px;" width="240"><p align="right">Custom Design:&nbsp;</p></td>
+
+                                <td><p>$<input name="" value="75" class="formtext" style="width:60px;" type="text"></p></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="padding:6px 0px;" width="240"><p align="right">Video, Audio or Text Testimonial:&nbsp;</p>
+                                </td>
+
+                                <td><p>$<input name="" value="25" class="formtext" style="width:60px;" type="text"></p></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="padding:6px 0px;" width="240"><p align="right">Online Support :&nbsp;</p></td>
+
+                                <td><p>$<input name="" value="25" class="formtext" style="width:60px;" type="text"></p></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="padding:6px 0px;" width="240"><p align="right">Basic Ticket System:&nbsp;</p></td>
+
+                                <td><p>$<input name="" value="25" class="formtext" style="width:60px;" type="text"></p></td>
+
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+                        <br>
+
+                        <table class="border" border="0" cellpadding="0" cellspacing="0" width="320">
+
+                            <tbody>
+                            <tr>
+
+                                <td colspan="2" class="lightgrey"><p style="padding:6px;" align="center"><strong>Minor Add-ons -
+                                    Once Off Charge</strong></p>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="padding:6px 0px;" width="240"><p align="right">Google Maps:&nbsp;</p></td>
+
+                                <td><p>$<input name="" value="25" class="formtext" style="width:60px;" type="text"></p></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="padding:6px 0px;" width="240"><p align="right">Google Analytics:&nbsp;</p></td>
+
+                                <td><p>$<input name="" value="50" class="formtext" style="width:60px;" type="text"></p></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="padding:6px 0px;" width="240"><p align="right">Custom Form:&nbsp;</p></td>
+
+                                <td><p>$<input name="" value="25" class="formtext" style="width:60px;" type="text"></p></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="padding:6px 0px;" width="240"><p align="right">Favourite Icon:&nbsp;</p></td>
+
+                                <td><p>$<input name="" value="5" class="formtext" style="width:60px;" type="text"></p></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="padding:6px 0px;" width="240"><p align="right">Social Media:&nbsp;</p></td>
+
+                                <td><p>$<input name="" value="5" class="formtext" style="width:60px;" type="text"></p></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="padding:6px 0px;" width="240"><p align="right">Tell a Friend:&nbsp;</p></td>
+
+                                <td><p>$<input name="" value="10" class="formtext" style="width:60px;" type="text"></p></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="padding:6px 0px;" width="240"><p align="right">Email Signature:&nbsp;</p></td>
+
+                                <td><p>$<input name="" value="10" class="formtext" style="width:60px;" type="text"></p></td>
+
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+                    </td>
+
+                </tr>
+
+                </tbody>
+            </table>
+
+        </td>
+
+        <td width="30"><p>&nbsp;</p></td>
+
+        <td valign="top">
+
+            <!-- Add-ons -->
+
+            <table border="0" cellpadding="0" cellspacing="0">
+
+                <tbody>
+                <tr>
+
+                    <td>
+
+                        <table class="border" border="0" cellpadding="0" cellspacing="0" width="320">
+
+                            <tbody>
+                            <tr>
+
+                                <td colspan="2" class="lightgrey"><p style="padding:6px;" align="center"><strong>Chargable
+                                    Extras - Monthly Charge</strong>
+                                </p></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="padding:6px 0px;" width="240"><p align="right">e-commerce:&nbsp;</p></td>
+
+                                <td><p>$<input name="" value="10" class="formtext" style="width:60px;" type="text"></p></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="padding:6px 0px;" width="240"><p align="right">Call To Action:&nbsp;</p></td>
+
+                                <td><p>$<input name="" value="10" class="formtext" style="width:60px;" type="text"></p></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="padding:6px 0px;" width="240"><p align="right">Email Subscription:&nbsp;</p></td>
+
+                                <td><p>$<input name="" value="2.50" class="formtext" style="width:60px;" type="text"></p></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="padding:6px 0px;" width="240"><p align="right">Secure Login <span class="tinytext">per 100 Members</span>:&nbsp;
+                                </p></td>
+
+                                <td><p>$<input name="" value="2.50" class="formtext" style="width:60px;" type="text"></p></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="padding:6px 0px;" width="240"><p align="right">Online Support <span class="tinytext">per 1000 records</span>:&nbsp;
+                                </p></td>
+
+                                <td><p>$<input name="" value="2.50" class="formtext" style="width:60px;" type="text"></p></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="padding:6px 0px;" width="240"><p align="right">Basic Ticket System per <span
+                                        class="tinytext">1000 records</span>:&nbsp;
+                                </p></td>
+
+                                <td><p>$<input name="" value="2.50" class="formtext" style="width:60px;" type="text"></p></td>
+
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+                        <br>
+
+                        <table class="border" border="0" cellpadding="0" cellspacing="0" width="320">
+
+                            <tbody>
+                            <tr>
+
+                                <td colspan="2" class="lightgrey"><p style="padding:6px;" align="center"><strong>Chargable
+                                    Extras - Per Use</strong></p></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="padding:6px 0px;" width="240"><p align="right">SMS <span
+                                        class="tinytext">per SMS</span>:&nbsp;</p></td>
+
+                                <td><p>$<input name="" value="0.02" class="formtext" style="width:60px;" type="text"></p></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td style="padding:6px 0px;" width="240"><p align="right">Email Subscription <span
+                                        class="tinytext">per email after 500</span>:&nbsp;
+                                </p></td>
+
+                                <td><p>$<input name="" value="0.005" class="formtext" style="width:60px;" type="text"></p></td>
+
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+                    </td>
+
+                </tr>
+
+                </tbody>
+            </table>
+
+        </td>
+
+        </tr>
+
+        </tbody>
+        </table>
+
+        </p>
+
+        <p align="center"><input name="submit" value="Save Changes" style="width:990px;" class="formbutton" type="submit"></p>
+
+        </form>
+
+
+        </td>
+        </tr>
+        </tbody>
+        </table>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+        <p class="tinytext" style="padding-top:3px;" align="center">
+            ©2004 - 2013 - Webtrix<sup>®</sup> Holdings - All Rights Reserved</p></td>
+        </tr>
+        </tbody>
+        </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
