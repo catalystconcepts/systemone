@@ -1,0 +1,52 @@
+{% extends 'admin-master.html.twig' %}
+
+{% block title %}Dashboard - {{ parent() }}{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+<div class="container box">
+    <div class="row">
+        <div class="col-md-11 main-content border col-centered">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody><tr>
+                    <td align="center">
+                        <br>
+                        <table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" width="1020">
+                            <tbody><tr>
+                                <td style="padding:10px;">
+                                    <table height="500" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody><tr>
+                                            <td valign="top">
+
+                                                <!-- Header -->
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                    <tbody><tr>
+                                                        <td><img src="/img/webtrix-holdings-logo.gif" alt="Webtrix Holdings" border="0"></td>
+                                                        <td><p class="header" style="font-size:25px;">Master Admin Area</p></td>
+                                                        <td align="right"><a href="http://webtrixholdings.com.au/master/home/logout">Logout</a> | <a href="http://webtrixholdings.com.au/master/dashboard">Home</a> &nbsp; </td>
+                                                    </tr>
+                                                    </tbody></table>
+                                                <p></p>
+
+                                                <div class="line"></div>
+                                                <table border="0" cellpadding="0" cellspacing="0">
+                                                    <tbody><tr>
+                                                        <td width="290">&nbsp;</td>
+                                                        <td width="125"><a href="http://webtrixholdings.com.au/master/dashboard/invoices" class="mainbutton">INVOICE<br>SYSTEM</a></td>
+                                                        <td width="20">&nbsp;</td>
+                                                        <td width="125"><a href="http://webtrixholdings.com.au/master/dashboard/reports" class="mainbutton">REPORTS</a></td>
+                                                        <td width="20">&nbsp;</td>
+                                                        <td width="125"><a href="http://webtrixholdings.com.au/master/dashboard/client" class="mainbutton">CLIENT<br>MANAGEMENT</a></td>
+                                                        <td width="290">&nbsp;</td>
+                                                    </tr>
+                                                    </tbody></table>
+
+                                            </td></tr></tbody></table></td></tr></tbody></table><p class="tinytext" style="padding-top:3px;" align="center">
+                        ©2004 - 2013 - Webtrix<sup>®</sup> Holdings - All Rights Reserved</p></td></tr></tbody></table>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

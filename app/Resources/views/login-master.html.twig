@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Login - Webtrix Holdings Master Admin Area</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="copyright" content="2004-2013 - Webtrix Technologies - All Rights Reserved">
+    <meta name="owner" content="Webtrix Technologies . com">
+    <meta name="author" content="Webtrix Technologies . com">
+    <meta name="reply-to" content="info@webtrixtechnologies.com">
+    <meta name="resource-type" content="document">
+    <meta name="clientbase" content="global">
+    <meta name="distribution" content="world wide web">
+    <meta name="location" content="w.w.w.">
+    <meta name="language" content="en">
+    <meta name="distribution" content="global">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="3 days">
+    <meta name="audience" content="all">
+    <meta name="expires" content="never">
+    <meta name="page-type" content="document">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <!-- Bootstrap -->
+    <link href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" media="screen"/>
+    <!-- Custom CSS -->
+    <link href="/css/common/style.css" rel="stylesheet" type="text/css">
+    <link href="/css/common/custom.css" rel="stylesheet" type="text/css">
+    <link href="/css/layout/login-master.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container box">
+    <div class="row">
+        <div class="col-md-9 main-content border col-centered">
+            <div class="row">
+                <div class="col-md-4 logo">
+                    <img src="/img/stop.png" alt="">
+                </div>
+                <div class="col-md-8 controls">
+                    <p class="header">Webtrix<sup>®</sup> Holdings Master Admin</p>
+
+                    <p>The Webtrix<sup>®</sup> Holdings Master Admin Area has no infomation of any use to anyone other
+                        than us.
+                    </p>
+
+                    <div class="line"></div>
+                    <p>Please enter your secure access details below:</p>
+
+                    <div class="errors">
+                    </div>
+                    <form action="http://webtrixholdings.com.au/master/home" method="post" accept-charset="utf-8">
+                        <div style="display:none">
+                            <input name="csrf_name" value="a7d5867a686b154e585657fa9e03f972" type="hidden">
+                        </div>
+                        <input name="csrf_name" value="a7d5867a686b154e585657fa9e03f972" type="hidden">
+                        <input name="redirect_to" value="" type="hidden">
+
+                        <div style="padding-right:30px;" align="center">
+                            <input name="username" style="width:200px;" class="formtext" value="Username"
+                                   onfocus="if(this.value=='Username')this.value='';"
+                                   onblur="if(this.value=='')this.value='Username';" type="text"><br>
+                            <input style="width:200px;" class="formtext" value="Password"
+                                   onclick="this.value='';this.onclick='test'; setAttribute('type', 'Password');"
+                                   onfocus="if (this.value == 'Password') {this.value = ''; setAttribute('type', 'Password');}"
+                                   onblur="if (this.value == '') {this.value = 'Password';setAttribute('type', 'text');}"
+                                   name="password" type="text"><br>
+                            <input name="submit" value="Enter" style="width:200px; text-align:left;" class="formbutton"
+                                   type="submit"><br><br>
+                        </div>
+                        <div class="line"></div>
+                    </form>
+                    <p>If you are interested in further information please visit <a
+                            href="http://www.webtrixtechnologies.com/">www.webtrixtechnologies.com</a>.
+                    </p>
+                </div>
+            </div>
+            <p></p>
+            <p class="tinytext" align="center">© 2004 - 2013 - Webtrix<sup>®</sup> Holdings - All Rights Reserved</p>
+        </div>
+    </div>
+</div>
+
+{% block javascripts %}
+    <script src="{{ asset('assets/jquery/jquery-1.10.2.min.js') }}"></script>
+    <script src="{{ asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>
+{% endblock %}
+</body>
+</html>

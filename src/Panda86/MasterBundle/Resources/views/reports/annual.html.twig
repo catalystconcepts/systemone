@@ -1,0 +1,153 @@
+{% extends 'admin-master.html.twig' %}
+
+{% block title %}Reports - {{ parent() }}{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="/css/admin-master/reports-main.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block body %}
+<div class="container box">
+    <div class="row">
+        <div class="col-md-11 main-content border col-centered">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody><tr>
+                    <td align="center">
+                        <br>
+                        <table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" width="1020">
+                            <tbody><tr>
+                                <td style="padding:10px;">
+                                    <table height="500" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody><tr>
+                                            <td valign="top">
+
+                                                <!-- Header -->
+
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                    <tbody><tr>
+                                                        <td><img src="/img/webtrix-holdings-logo.gif" alt="Webtrix Holdings" border="0"></td>
+                                                        <td><p class="header" style="font-size:25px;">Master Admin Area</p></td>
+                                                        <td align="right"><a href="http://webtrixholdings.com.au/master/home/logout">Logout</a> | <a href="http://webtrixholdings.com.au/master/dashboard">Home</a> &nbsp; </td>
+                                                    </tr>
+                                                    </tbody></table>
+                                                <p></p>
+
+                                                <div class="line"></div>
+                                                <p class="header" align="center">Annual Income Report</p>
+                                                <p>
+                                                    <strong>DEVELOPMENT NOTES</strong>: in Australia the financial
+                                                    year is from 1st July to 30th June... we will start on the 2013/2014
+                                                    year and the system will need to automatically add the next year and on
+                                                    the 1st July each year it will need to generate and email the annual
+                                                    report to info@webtrixholdings.com.au and ahird59@tpg.com.au.<br><br>
+                                                    The dropdown will need an on change function so that once you select the quarter the report starts straight away.<br><br>
+                                                    This report needs to be able to be run at any time in the year and
+                                                    this report will be the same for HiGoTec, the White Labels and the
+                                                    e-commerce add-on.<br><br>
+                                                    <strong>NOTE</strong>: there will also be weekly reports for
+                                                    HiGoTec, the White Labels and End Users/e-commerce add-on and daily
+                                                    reports for the White Labels and End Users/e-commerce add-on.
+                                                </p>
+                                                <form>
+                                                    <p align="center">
+                                                        <select name="quarter" class="formtext" style="width:250px;">
+                                                            <option value="--" selected="selected">Select Year</option>
+                                                            <option value="1314">2013/2014</option>
+                                                            <!-- if the system was running before hand you would see the previous years below -->
+                                                            <option value="1213">2012/2013</option>
+                                                            <option value="1112">2011/2012</option>
+                                                            <option value="1011">2010/2011</option>
+                                                        </select>
+                                                    </p>
+                                                </form>
+                                                <p align="center">
+                                                <table class="border" border="0" cellpadding="0" cellspacing="0" width="550">
+                                                    <tbody><tr>
+                                                        <td>
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                <tbody><tr>
+                                                                    <td><p class="header" style="padding:10px;" align="center">Webtrix Holdings - 2013/2014</p></td>
+                                                                </tr>
+                                                                </tbody></table>
+                                                            <table style="padding-bottom:10px;" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                <tbody><tr>
+                                                                    <td width="10"><p></p></td>
+                                                                    <td class="lightgrey" style="padding:5px;" width="180"><p align="center"><strong>Month</strong></p></td>
+                                                                    <td class="lightgrey" style="padding:5px;" width="125"><p align="center"><strong>Total<br>Invoices</strong></p></td>
+                                                                    <td class="lightgrey" style="padding:5px;" width="125"><p align="center"><strong>Average<br>Invoice</strong></p></td>
+                                                                    <td class="lightgrey" style="padding:5px;" width="100"><p align="center"><strong>Total<br>Income</strong></p></td>
+                                                                    <td width="10"><p></p></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td width="10"><p></p></td>
+                                                                    <td style="padding:5px;"><p align="center">January 2014</p></td>
+                                                                    <td><p align="center">999</p></td>
+                                                                    <td><p align="center">$999</p></td>
+                                                                    <td><p align="center">$99999</p></td>
+                                                                    <td width="10"><p></p></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td width="10"><p></p></td>
+                                                                    <td class="lightgrey" style="padding:5px;"><p align="center">December 2013</p></td>
+                                                                    <td class="lightgrey"><p align="center">999</p></td>
+                                                                    <td class="lightgrey"><p align="center">$999</p></td>
+                                                                    <td class="lightgrey"><p align="center">$99999</p></td>
+                                                                    <td width="10"><p></p></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td width="10"><p></p></td>
+                                                                    <td style="padding:5px;"><p align="center">November 2013</p></td>
+                                                                    <td><p align="center">999</p></td>
+                                                                    <td><p align="center">$999</p></td>
+                                                                    <td><p align="center">$99999</p></td>
+                                                                    <td width="10"><p></p></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td width="10"><p></p></td>
+                                                                    <td class="lightgrey" style="padding:5px;"><p align="center">October 2013</p></td>
+                                                                    <td class="lightgrey"><p align="center">999</p></td>
+                                                                    <td class="lightgrey"><p align="center">$999</p></td>
+                                                                    <td class="lightgrey"><p align="center">$99999</p></td>
+                                                                    <td width="10"><p></p></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td width="10"><p></p></td>
+                                                                    <td style="padding:5px;"><p align="center">September 2013</p></td>
+                                                                    <td><p align="center">999</p></td>
+                                                                    <td><p align="center">$999</p></td>
+                                                                    <td><p align="center">$99999</p></td>
+                                                                    <td width="10"><p></p></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td width="10"><p></p></td>
+                                                                    <td style="padding:5px;"><p align="center"></p></td>
+                                                                    <td><p align="center"></p></td>
+                                                                    <td><p align="right"><strong>Total:&nbsp;</strong></p></td>
+                                                                    <td><p align="center"><strong>$999999</strong></p></td>
+                                                                    <td width="10"><p></p></td>
+                                                                </tr>
+                                                                </tbody></table>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody></table>
+                                                </p>
+                                                <p align="center">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="550">
+                                                    <tbody><tr>
+                                                        <td align="right">
+                                                            <form>
+                                                                <input name="Email" style="width:250px;" class="formtext" value="Email report to..." onfocus="if(this.value=='Email report to...')this.value='';" onblur="if(this.value=='')this.value='Email report to...';" type="text"> <input name="submit" value="Send" style="width:60px;" class="formbutton" type="submit"><p></p>
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody></table>
+                                                </p>
+                                                <p align="right"><a href="http://webtrixholdings.com.au/master/dashboard/reports">&lt;&lt; back to reports</a> &nbsp;</p>
+
+
+                                            </td></tr></tbody></table></td></tr></tbody></table><p class="tinytext" style="padding-top:3px;" align="center">
+                        ©2004 - 2013 - Webtrix<sup>®</sup> Holdings - All Rights Reserved</p></td></tr></tbody></table>
+        </div>
+    </div>
+</div>
+{% endblock %}
