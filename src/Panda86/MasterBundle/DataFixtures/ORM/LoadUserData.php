@@ -21,6 +21,7 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface
         {
             $admin = new User();
             $admin->setEnabled(true);
+            $admin->addRole('ROLE_ADMIN'); # assign admin role
             $admin->setUsername($user['username']);
             $admin->setEmail($user['email']);
             $admin->setPlainPassword($user['password']);

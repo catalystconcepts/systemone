@@ -8,11 +8,6 @@ class DashboardController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('login-master.html.twig');
-    }
-
-    public function dashboardAction()
-    {
         return $this->render('Panda86MasterBundle:Dashboard:index.html.twig');
     }
 

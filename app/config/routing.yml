@@ -1,7 +1,15 @@
+app_root:
+    path: /
+    defaults:
+        _controller: FrameworkBundle:Redirect:urlRedirect
+        path: /admin
+        permanent: true
+
 panda86_master:
     resource: "@Panda86MasterBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /admin
 
+# fos_user_bundle
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 
