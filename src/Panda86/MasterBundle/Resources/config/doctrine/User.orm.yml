@@ -1,6 +1,6 @@
 Panda86\MasterBundle\Entity\User:
     type:  entity
-    table: fos_user
+    table: master_admin_user
     id:
         id:
             type: integer

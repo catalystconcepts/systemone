@@ -2,7 +2,7 @@
 
 namespace Panda86\MasterBundle\Entity;
 
-use FOS\UserBundle\Model\User as BaseUser;
+use FOS\UserBundle\Entity\User as BaseUser;
 
 /**
  * User
