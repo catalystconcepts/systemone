@@ -13,32 +13,32 @@ class DashboardController extends Controller
 
     public function dashboardAction()
     {
-        return $this->render('Panda86MasterBundle:dashboard:index.html.twig');
+        return $this->render('Panda86MasterBundle:Dashboard:index.html.twig');
     }
 
     public function clientAction()
     {
-        return $this->render('Panda86MasterBundle:client:index.html.twig');
+        return $this->render('Panda86MasterBundle:Client:index.html.twig');
     }
 
     public function reportsAction()
     {
-        return $this->render('Panda86MasterBundle:reports:index.html.twig');
+        return $this->render('Panda86MasterBundle:Reports:index.html.twig');
     }
 
     public function annualAction()
     {
-        return $this->render('Panda86MasterBundle:reports:annual.html.twig');
+        return $this->render('Panda86MasterBundle:Reports:annual.html.twig');
     }
 
     public function quarterAction()
     {
-        return $this->render('Panda86MasterBundle:reports:quarterly.html.twig');
+        return $this->render('Panda86MasterBundle:Reports:quarterly.html.twig');
     }
 
     public function invoicesAction()
     {
-        return $this->render('Panda86MasterBundle:invoices:index.html.twig');
+        return $this->render('Panda86MasterBundle:Invoices:index.html.twig');
     }
 
 }

@@ -56,27 +56,8 @@
 
                     <div class="errors">
                     </div>
-                    <form action="" method="post" accept-charset="utf-8">
-                        <div style="display:none">
-                            <input name="csrf_name" value="a7d5867a686b154e585657fa9e03f972" type="hidden">
-                        </div>
-                        <input name="csrf_name" value="a7d5867a686b154e585657fa9e03f972" type="hidden">
-                        <input name="redirect_to" value="" type="hidden">
-
-                        <div style="padding-right:30px;" align="center">
-                            <input name="username" style="width:200px;" class="formtext" value="Username"
-                                   onfocus="if(this.value=='Username')this.value='';"
-                                   onblur="if(this.value=='')this.value='Username';" type="text"><br>
-                            <input style="width:200px;" class="formtext" value="Password"
-                                   onclick="this.value='';this.onclick='test'; setAttribute('type', 'Password');"
-                                   onfocus="if (this.value == 'Password') {this.value = ''; setAttribute('type', 'Password');}"
-                                   onblur="if (this.value == '') {this.value = 'Password';setAttribute('type', 'text');}"
-                                   name="password" type="text"><br>
-                            <input name="submit" value="Enter" style="width:200px; text-align:left;" class="formbutton"
-                                   type="submit"><br><br>
-                        </div>
-                        <div class="line"></div>
-                    </form>
+                    {% block form %}{% endblock %}
+                    <br/>
                     <p>If you are interested in further information please visit <a
                             href="http://www.webtrixtechnologies.com/">www.webtrixtechnologies.com</a>.
                     </p>
