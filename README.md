@@ -1,42 +1,25 @@
-# Symfony CMF Standard Edition
+## System Requirements
+This is a Symfony2 web app. In order to run you would need to have below requirements.
 
-[![Build Status](https://secure.travis-ci.org/symfony-cmf/symfony-cmf-standard.png)](http://travis-ci.org/symfony-cmf/symfony-cmf-standard)
-[![Latest Stable Version](https://poser.pugx.org/symfony-cmf/standard-edition/version.png)](https://packagist.org/packages/symfony-cmf/standard-edition)
-[![Total Downloads](https://poser.pugx.org/symfony-cmf/standard-edition/d/total.png)](https://packagist.org/packages/symfony-cmf/standard-edition)
+#### Symfony2 requirements:
 
-The Symfony CMF Standard Edition (SE) is a distribution of the
-[Symfony Content Management Framework (CMF)](http://cmf.symfony.com/)
-and licensed under the [MIT License](LICENSE).
+Symfony2 is only supported on PHP 5.3.3 and up.
 
-This distribution is based on all the main CMF components needed for most common
-use cases, and can be used to create a new Symfony/CMF project from scratch.
+Be warned that PHP versions before 5.3.8 are known to be buggy and might not
+work for you:
 
+ * before PHP 5.3.4, if you get "Notice: Trying to get property of
+   non-object", you've hit a known PHP bug (see
+   https://bugs.php.net/bug.php?id=52083 and
+   https://bugs.php.net/bug.php?id=50027);
 
-## Requirements
+ * before PHP 5.3.8, if you get an error involving annotations, you've hit a
+   known PHP bug (see https://bugs.php.net/bug.php?id=55156).
 
-* Symfony 2.3.x
-* See also the `require` section of [composer.json](composer.json)
-
-
-## Documentation
-
-For the install guide and reference, see:
-
-* [symfony-cmf-standard documentation](http://symfony.com/doc/master/cmf/book/installation.html)
-
-See also:
-
-* [All Symfony CMF documentation](http://symfony.com/doc/master/cmf/index.html) - complete Symfony CMF reference
-* [Symfony CMF Website](http://cmf.symfony.com/) - introduction, live demo, support and community links
+ * PHP 5.3.16 has a major bug in the Reflection subsystem and is not suitable to
+   run Symfony2 (https://bugs.php.net/bug.php?id=62715)
 
 
-## Contributing
+## Installation
 
-Pull requests are welcome. Please see our [CONTRIBUTING](CONTRIBUTING.md) guide.
-
-Unit and/or functional tests exist for this bundle. See the
-[Testing documentation](http://symfony.com/doc/master/cmf/components/testing.html)
-for a guide to running the tests.
-
-Thanks to
-[everyone who has contributed](https://github.com/symfony-cmf/symfony-cmf-standard/contributors) already.
+[TODO: add documentation]
