@@ -39,7 +39,25 @@
     <![endif]-->
 </head>
 <body>
-{% block nav_links %}{% endblock %}
+{% block nav_links %}
+    <div id="nav_links">
+        <p class="pull-right">
+            {% block admin_login %}
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+                    <a id="logout" href="{{ path('fos_user_security_logout') }}">
+                        {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                    </a>
+                {% else %}
+                    <a id="login" href="{{ path('fos_user_security_login') }}">
+                        {{ 'layout.login'|trans({}, 'FOSUserBundle') }}
+                    </a>
+                {% endif %}
+            {% endblock %}
+        </p>
+    </div>
+{% endblock %}
+<br/>
 {% block body %}{% endblock %}
 
 {% block javascripts %}
