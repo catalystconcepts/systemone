@@ -21,3 +21,7 @@ panda86_master_r_q:
 panda86_master_i:
     path:  /invoices
     defaults: { _controller: Panda86MasterBundle:Dashboard:invoices }
+
+panda86_master_u_r:
+    path:  /change-password
+    defaults: { _controller: FOSUserBundle:ChangePassword:changePassword }
