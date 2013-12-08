@@ -1,0 +1,24 @@
+{% extends 'admin-master.html.twig' %}
+
+{% block title %}Profile - {{ parent() }}{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <style type="text/css">
+        body {
+            text-align: left;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="main-content border col-md-4 col-centered">
+            <h3 class="header text-center">Profile</h3>
+            <br/>
+            <div class="fos_user_user_show">
+                <p>{{ 'profile.show.username'|trans({}, 'FOSUserBundle') }}: {{ user.username }}</p>
+                <p>{{ 'profile.show.email'|trans({}, 'FOSUserBundle') }}: {{ user.email }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
