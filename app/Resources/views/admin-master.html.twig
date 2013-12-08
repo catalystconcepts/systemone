@@ -42,7 +42,7 @@
 {% block nav_links %}
     <div id="nav_links">
         <div class="row">
-            <div class="col-md-6 col-lg-offset-6">
+            <div class="col-md-6 col-md-offset-6">
                 <a href="{{ path('panda86_master_u_r') }}">Admin</a> <span>|</span>
                 <a href="{{ path('panda86_master_d') }}">Home</a> <span>| &nbsp;</span>
 
@@ -63,7 +63,19 @@
     </div>
 {% endblock %}
 <br/>
-{% block body %}{% endblock %}
+<div class="container">
+    <!-- if javascript is turned off -->
+    {% block noscript %}
+        {{ include('no-script.html') }}
+    {% endblock %}
+
+    <div class="row"><!-- Flash notification messages -->
+        <div class="col-md-10 col-md-offset-1">
+            {{ include('show-flash-msgs.html.twig') }}
+        </div>
+    </div>
+    <!-- Renders page contents here -->
+    {% block body %}{% endblock %}
 
 {% block javascripts %}
     <script src="{{ asset('assets/jquery/jquery-1.10.2.min.js') }}"></script>
